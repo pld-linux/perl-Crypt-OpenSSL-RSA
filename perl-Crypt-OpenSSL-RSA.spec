@@ -19,8 +19,8 @@ Summary(sv):	Crypt::OpenSSL::RSA Perlmodul
 Summary(uk):	Модуль для Perl Crypt::OpenSSL::RSA
 Summary(zh_CN):	Crypt::OpenSSL::RSA Perl дё©И
 Name:		perl-Crypt-OpenSSL-RSA
-Version:	0.14
-Release:	2
+Version:	0.16
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -98,11 +98,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%dir %{perl_sitearch}/Crypt/OpenSSL
 %{perl_sitearch}/Crypt/OpenSSL/RSA.pm
-%dir %{perl_sitearch}/auto/Crypt/OpenSSL
 %dir %{perl_sitearch}/auto/Crypt/OpenSSL/RSA
 %{perl_sitearch}/auto/Crypt/OpenSSL/RSA/*.al
 %{perl_sitearch}/auto/Crypt/OpenSSL/RSA/*.bs
+%{perl_sitearch}/auto/Crypt/OpenSSL/RSA/autosplit.ix
 %attr(755,root,root) %{perl_sitearch}/auto/Crypt/OpenSSL/RSA/*.so
 %{_mandir}/man3/*
