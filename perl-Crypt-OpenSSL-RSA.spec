@@ -9,9 +9,11 @@ License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	openssl-devel
-BuildRequires:	perl-Crypt-OpenSSL-Random
 BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:	rpm-perlprov >= 3.0.3-16
+%if %{?_without_tests:0}%{!?_without_tests:1}
+BuildRequires:	perl-Crypt-OpenSSL-Random
+%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,6 +27,7 @@ decryption, signatures and signature verification.
 %build
 perl Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
