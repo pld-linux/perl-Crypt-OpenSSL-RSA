@@ -4,8 +4,8 @@
 Summary:	Crypt-Primes perl module
 Summary(pl):	Modu³ perla Crypt-Primes
 Name:		perl-Crypt-OpenSSL-RSA
-Version:	0.12
-Release:	0.9
+Version:	0.14
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -44,6 +44,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitearch}/Crypt/OpenSSL/RSA.pm
 %dir %{perl_sitearch}/auto/Crypt/OpenSSL/
 %dir %{perl_sitearch}/auto/Crypt/OpenSSL/RSA
-%{perl_sitearch}/auto/Crypt/OpenSSL/RSA/*al
-%attr(755,root,root) %{perl_sitearch}/auto/Crypt/OpenSSL/RSA/RSA.so
+%{perl_sitearch}/auto/Crypt/OpenSSL/RSA/*
 %{_mandir}/man3/*
