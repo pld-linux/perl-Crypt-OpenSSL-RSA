@@ -10,7 +10,8 @@ License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-16
-BuildRequires:	perl >= 5.6.1
+BuildRequires:	openssl-devel
+BuildRequires:	perl-devel >= 5.6.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -39,5 +40,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc *.gz
-%{perl_sitelib}/i686-pld-linux/5.6.1/Crypt/OpenSSL/RSA.pm
+%dir %{perl_sitearch}/Crypt/OpenSSL
+%{perl_sitearch}/Crypt/OpenSSL/RSA.pm
+%dir %{perl_sitearch}/auto/Crypt/OpenSSL/
+%dir %{perl_sitearch}/auto/Crypt/OpenSSL/RSA
+%{perl_sitearch}/auto/Crypt/OpenSSL/RSA/*al
+%attr(755,root,root) %{perl_sitearch}/auto/Crypt/OpenSSL/RSA/RSA.so
 %{_mandir}/man3/*
