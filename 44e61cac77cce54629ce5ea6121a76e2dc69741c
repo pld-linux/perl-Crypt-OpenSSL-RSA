@@ -1,0 +1,4 @@
+- s/perl/perl-devel/ in BuildRequires,
+- use %%{perl_sitearch} macro in files,
+- updated %%files,
+- added openssl-devel to BuildRequires.
