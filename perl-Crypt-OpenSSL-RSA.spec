@@ -15,10 +15,10 @@ BuildRequires:	perl-devel >= 5.6.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Crypt-OpenSSL-RSA perl module.
+Crypt::OpenSSL::RSA perl module.
 
 %description -l pl
-Modu³ perla Crypt-OpenSSL-RSA.
+Modu³ perla Crypt::OpenSSL::RSA.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
