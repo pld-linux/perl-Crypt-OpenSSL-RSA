@@ -1,10 +1,15 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Crypt
 %define		pnam	OpenSSL-RSA
-Summary:	Crypt::OpenSSL::RSA - RSA encoding and decoding, using the openSSL libraries
+Summary:	Crypt::OpenSSL::RSA - RSA encoding and decoding, using the OpenSSL libraries
+Summary(pl):	Crypt::OpenSSL::RSA - kodowanie i dekodowanie RSA przy u¿yciu OpenSSL
 Name:		perl-Crypt-OpenSSL-RSA
 Version:	0.16
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -21,12 +26,18 @@ Crypt::OpenSSL::RSA provides the ability to RSA encrypt strings which
 are somewhat shorter than the block size of a key.  It also allows for
 decryption, signatures and signature verification.
 
+%description -l pl
+Modu³ Crypt::OpenSSL::RSA udostêpnia mo¿liwo¶æ kodowania algorytmem
+RSA ³añcuchów, które s± krótsze ni¿ rozmiar bloku klucza. Pozwala
+tak¿e na odszyfrowywanie oraz weryfikacjê podpisów.
+
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 perl Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
+
 %{!?_without_tests:%{__make} test}
 
 %install
