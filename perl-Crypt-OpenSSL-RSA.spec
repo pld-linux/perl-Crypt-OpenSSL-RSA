@@ -9,13 +9,13 @@ Summary:	Crypt::OpenSSL::RSA - RSA encoding and decoding, using the OpenSSL libr
 Summary(pl):	Crypt::OpenSSL::RSA - kodowanie i dekodowanie RSA przy u¿yciu OpenSSL
 Name:		perl-Crypt-OpenSSL-RSA
 Version:	0.17
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	openssl-devel >= 0.9.7
 BuildRequires:	perl-devel >= 5.6.1
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{?_without_tests:0}%{!?_without_tests:1}
 BuildRequires:	perl-Crypt-OpenSSL-Random
 %endif
@@ -35,7 +35,8 @@ tak¿e na odszyfrowywanie oraz weryfikacjê podpisów.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %{!?_without_tests:%{__make} test}
@@ -51,10 +52,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitearch}/Crypt/OpenSSL/RSA.pm
-%dir %{perl_sitearch}/auto/Crypt/OpenSSL/RSA
-%{perl_sitearch}/auto/Crypt/OpenSSL/RSA/*.al
-%{perl_sitearch}/auto/Crypt/OpenSSL/RSA/*.bs
-%{perl_sitearch}/auto/Crypt/OpenSSL/RSA/autosplit.ix
-%attr(755,root,root) %{perl_sitearch}/auto/Crypt/OpenSSL/RSA/*.so
+%{perl_vendorarch}/Crypt/OpenSSL/RSA.pm
+%dir %{perl_vendorarch}/auto/Crypt/OpenSSL/RSA
+%{perl_vendorarch}/auto/Crypt/OpenSSL/RSA/*.al
+%{perl_vendorarch}/auto/Crypt/OpenSSL/RSA/*.bs
+%{perl_vendorarch}/auto/Crypt/OpenSSL/RSA/autosplit.ix
+%attr(755,root,root) %{perl_vendorarch}/auto/Crypt/OpenSSL/RSA/*.so
 %{_mandir}/man3/*
