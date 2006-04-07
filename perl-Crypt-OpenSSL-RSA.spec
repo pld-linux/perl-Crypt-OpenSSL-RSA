@@ -8,13 +8,13 @@
 Summary:	Crypt::OpenSSL::RSA - RSA encoding and decoding, using the OpenSSL libraries
 Summary(pl):	Crypt::OpenSSL::RSA - kodowanie i dekodowanie RSA przy u¿yciu OpenSSL
 Name:		perl-Crypt-OpenSSL-RSA
-Version:	0.21
+Version:	0.22
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	eba94b49661eb9ee4bba7c849fc0f82d
+# Source0-md5:	2d23eb07ecb704e964e965ab3ec38c8f
 BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
