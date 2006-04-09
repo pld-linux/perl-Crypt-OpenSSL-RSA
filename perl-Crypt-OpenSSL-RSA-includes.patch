@@ -1,0 +1,11 @@
+--- Crypt-OpenSSL-RSA-0.22/RSA.xs.orig	2004-02-19 04:16:06.000000000 +0100
++++ Crypt-OpenSSL-RSA-0.22/RSA.xs	2006-04-09 22:26:51.269353750 +0200
+@@ -5,6 +5,8 @@
+ #include <openssl/ssl.h>
+ #include <openssl/bn.h>
+ #include <openssl/err.h>
++#include <openssl/md5.h>
++#include <openssl/ripemd.h>
+ 
+ typedef struct
+ {
