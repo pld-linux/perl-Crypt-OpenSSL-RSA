@@ -6,7 +6,7 @@
 %define		pdir	Crypt
 %define		pnam	OpenSSL-RSA
 Summary:	Crypt::OpenSSL::RSA - RSA encoding and decoding, using the OpenSSL libraries
-Summary(pl.UTF-8):   Crypt::OpenSSL::RSA - kodowanie i dekodowanie RSA przy użyciu OpenSSL
+Summary(pl.UTF-8):	Crypt::OpenSSL::RSA - kodowanie i dekodowanie RSA przy użyciu OpenSSL
 Name:		perl-Crypt-OpenSSL-RSA
 Version:	0.23
 Release:	1
