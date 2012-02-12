@@ -64,4 +64,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/auto/Crypt/OpenSSL/RSA/*.bs
 %{perl_vendorarch}/auto/Crypt/OpenSSL/RSA/autosplit.ix
 %attr(755,root,root) %{perl_vendorarch}/auto/Crypt/OpenSSL/RSA/*.so
-%{_mandir}/man3/*
+%{_mandir}/man3/Crypt::OpenSSL::RSA.3pm*
