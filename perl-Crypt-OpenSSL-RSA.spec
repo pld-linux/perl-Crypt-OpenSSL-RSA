@@ -8,7 +8,7 @@ Summary:	Crypt::OpenSSL::RSA - RSA encoding and decoding, using the OpenSSL libr
 Summary(pl.UTF-8):	Crypt::OpenSSL::RSA - kodowanie i dekodowanie RSA przy użyciu OpenSSL
 Name:		perl-Crypt-OpenSSL-RSA
 Version:	0.30
-Release:	4
+Release:	5
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
