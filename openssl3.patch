@@ -1,0 +1,15 @@
+--- Crypt-OpenSSL-RSA-0.31/RSA.xs~	2018-09-24 19:23:02.000000000 +0200
++++ Crypt-OpenSSL-RSA-0.31/RSA.xs	2021-10-15 22:28:07.598552868 +0200
+@@ -640,12 +640,6 @@
+   CODE:
+     p_rsa->padding = RSA_PKCS1_OAEP_PADDING;
+ 
+-void
+-use_sslv23_padding(p_rsa)
+-    rsaData* p_rsa;
+-  CODE:
+-    p_rsa->padding = RSA_SSLV23_PADDING;
+-
+ # Sign text. Returns the signature.
+ 
+ SV*
