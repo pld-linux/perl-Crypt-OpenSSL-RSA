@@ -1,20 +1,19 @@
 #
 # Conditional build:
-%bcond_without	tests	# Do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	Crypt
 %define		pnam	OpenSSL-RSA
 Summary:	Crypt::OpenSSL::RSA - RSA encoding and decoding, using the OpenSSL libraries
 Summary(pl.UTF-8):	Crypt::OpenSSL::RSA - kodowanie i dekodowanie RSA przy użyciu OpenSSL
 Name:		perl-Crypt-OpenSSL-RSA
-Version:	0.32
-Release:	2
+Version:	0.33
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Crypt/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	41ee1df9ce505ffb85ce26a18c494841
-Patch0:		openssl3.patch
+# Source0-md5:	402994cca9f4502741cf9514719b9bdf
 URL:		https://metacpan.org/dist/Crypt-OpenSSL-RSA
 BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	perl-Crypt-OpenSSL-Guess >= 0.11
@@ -40,7 +39,6 @@ także na odszyfrowywanie oraz weryfikację podpisów.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \
