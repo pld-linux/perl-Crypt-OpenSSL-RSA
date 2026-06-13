@@ -12,12 +12,12 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	https://www.cpan.org/modules/by-module/Crypt/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-module/Crypt/TIMLEGGE/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	477e40637f2f22ad30bad0d319c0701e
 URL:		https://metacpan.org/dist/Crypt-OpenSSL-RSA
 BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	perl-Crypt-OpenSSL-Guess >= 0.11
-BuildRequires:	perl-ExtUtils-MakeMaker >= 6.48
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.64
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
@@ -61,8 +61,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README.md
+%doc Changes README.md SECURITY.md
 %{perl_vendorarch}/Crypt/OpenSSL/RSA.pm
 %dir %{perl_vendorarch}/auto/Crypt/OpenSSL/RSA
-%attr(755,root,root) %{perl_vendorarch}/auto/Crypt/OpenSSL/RSA/RSA.so
+%{perl_vendorarch}/auto/Crypt/OpenSSL/RSA/RSA.so
 %{_mandir}/man3/Crypt::OpenSSL::RSA.3pm*
